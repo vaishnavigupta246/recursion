@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int fibonacci(int y)
+{
+    int sum;
+    if(y==0|| y==1)
+    return y;
+    
+    return fibonacci(y-1)+fibonacci(y-2);
+    
+}
+int main()
+{
+    int x;
+    cin>>x;
+    //int a=0,b=1;
+    cout<<fibonacci(x);
+}
