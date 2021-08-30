@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+bool check(string x,int y,int ini)
+{
+  if(ini>=y)
+  return true;
+  return((x[y]==x[ini])&&check(x,y-1,ini+1));
+}
+int main()
+{
+    string s;
+    cin>>s;
+    int i=0;
+    int l=s.size();
+    cout<<check(s,l-1,i);
+}
