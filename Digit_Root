@@ -1,0 +1,39 @@
+// 9999=9+9+9+9=36=3+6=9
+// output=9
+
+class Solution{
+  public:
+    //Complete this function
+    int digitalRoot(int n)
+    {
+        int sum;
+    if(n>=0 && n<10)
+    return n;
+    sum=n%10+digitalRoot(n/10);
+    
+    if(sum>=0 && sum<10)
+    return sum;
+    else
+    digitalRoot(sum);
+    }
+};
+
+// { Driver Code Starts.
+
+
+int main() {
+	int T;
+	cin>>T;//taking testcases
+	while(T--)
+	{
+	    int n;
+	    cin>>n;//taking number n
+	    
+	    //calling digitalRoot() function
+	    Solution obj;
+	    cout<<obj.digitalRoot(n)<<endl;
+	    
+	    
+	}
+	return 0;
+}  // } Driver Code Ends
